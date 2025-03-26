@@ -1,0 +1,19 @@
+import React from 'react';
+import styles from '../styles/Footer.module.scss'; // Import SCSS Module
+
+const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles['footer-content']}>
+        <p>&copy; {new Date().getFullYear()} Built by Hoa Lam</p>
+        <div className={styles['social-links']}>
+          <a href="https://www.linkedin.com/in/lamnhuthoa" target="_blank" className={styles["social-link"]}>LinkedIn</a>
+          <a href="https://github.com/lamnhuthoa" target="_blank" className={styles["social-link"]}>GitHub</a>
+          <a href="mailto:hoalamnhut@gmail.com" className={styles["social-link"]}>Email</a>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1A3636;  /* Deep Teal */
+  --accent-color: #40534C;   /* Charcoal Green */
+  --secondary-color: #677D6A; /* Sage Green */
+  --highlight-color: #D6BD98; /* Sand Beige */
+  --text-color: #FFFFFF;     /* White */
+  --border-radius-small: 5px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px; /* For cards, modals */
+  --border-radius-rounded: 50%; /* Fully rounded */
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+container {
+  background-color: var(--primary-color);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  padding: 40px 0;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--highlight-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  text-align: center;
+}

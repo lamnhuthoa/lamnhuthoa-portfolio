@@ -1,0 +1,33 @@
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-color) !important;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-link {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: var(--highlight-color);
+}

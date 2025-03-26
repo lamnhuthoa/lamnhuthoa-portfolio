@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .title {
+    color: var(--highlight-color);
+  }
+
+  .email-me-button {
+    border-radius: var(--border-radius-small);
+    &:hover {
+      background-color: var(--highlight-color);
+      color: var(--primary-color);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.timelineItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1200px;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  background-color: var(--highlight-color);
+  border-radius: var(--border-radius-rounded);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+.content {
+  background: var(--text-color);
+  padding: 20px;
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.year {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--accent-color);
+}
+
+.company {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--accent-color);
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+}
+
+.description {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: disc;
+  
+  li {
+    font-size: 1rem;
+    color: var(--accent-color);
+    margin-bottom: 6px;
+  }
+}
+
+.showMoreBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  .showMoreBtn {
+    padding: 12px 13px;
+    border-radius: var(--border-radius-small);
+    background-color: var(--secondary-color);
+  
+    &:hover {
+      background-color: var(--highlight-color);
+      color: var(--primary-color);
+    }
+  }
+}
