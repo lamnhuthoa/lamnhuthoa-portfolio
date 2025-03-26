@@ -3,12 +3,15 @@
 import React from 'react';
 import styles from '../styles/Header.module.scss'; // Import SCSS Module
 import { Tooltip } from 'react-tooltip';
+import Image from 'next/image';
 
 const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                <h1 className={styles.title}>Henry.</h1>
+                <div className={`${styles.logoContainer}`}>
+                    <Image src={'/images/logo/android-chrome-512x512.png'} alt={'logo'} width={100} height={0} layout="intrinsic" />
+                </div>
                 <nav className={styles.nav}>
                     <ul>
                         <li><a href="#introduction">About me</a></li>

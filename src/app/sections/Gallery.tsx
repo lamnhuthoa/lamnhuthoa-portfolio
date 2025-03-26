@@ -9,7 +9,7 @@ interface GalleryImage {
 
 const images: GalleryImage[] = [
     {
-        url: '/images/gallery-images/DSC09955.JPG',
+        url: '/images/gallery/DSC09955.JPG',
         desc: 'New York 2025'
     },
 ]
