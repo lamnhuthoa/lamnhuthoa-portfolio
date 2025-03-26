@@ -10,4 +10,10 @@
   .title {
     color: var(--highlight-color) !important;
   }
+
+  .descriptionContainer {
+    & p {
+        color: var(--text-color) !important;
+    }
+  }
 }

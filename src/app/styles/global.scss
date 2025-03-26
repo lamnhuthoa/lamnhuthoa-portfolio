@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1A3636;  /* Deep Teal */
+  --primary-color: rgb(26, 54, 54);  /* Deep Teal */
   --accent-color: #40534C;   /* Charcoal Green */
   --secondary-color: #677D6A; /* Sage Green */
   --highlight-color: #D6BD98; /* Sand Beige */
@@ -38,6 +38,10 @@ header {
 
 section {
   padding: 40px 0;
+
+  &.contact {
+    padding-bottom: 0px !important;
+  }
 }
 
 h1, h2, h3 {

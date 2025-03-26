@@ -3,19 +3,51 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-image: url("/images/yard-yellow-tree.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::after {
+    content: "";  // Pseudo-element to create overlay
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 54, 54, 0.5);
+    z-index: 1;
+  }
 
   .title {
     color: var(--highlight-color);
+    z-index: 99;
+  }
+
+  p {
+    z-index: 99;
+    color: var(--primary-color);
+  }
+
+  a {
+    z-index: 99;
   }
 
   .email-me-button {
     border-radius: var(--border-radius-small);
+    z-index: 99;
+
     &:hover {
       background-color: var(--highlight-color);
       color: var(--primary-color);
     }
   }
+}
+
+.contactMeContainer {
+    border-radius: var(--border-radius-medium);
+    background-color: var(--text-color);
+    width: 33rem;
+    padding: 20px;
+    z-index: 99;
 }

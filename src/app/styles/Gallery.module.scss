@@ -14,4 +14,63 @@
   .title {
     color: var(--highlight-color);
   }
+
+  .galleryContainer {
+    margin: 1rem 20px 0 20px;
+    background-color: var(--primary-color);
+    width: 1160px;
+    // border: .5rem solid var(--highlight-color);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: inset 0 6px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    .innerContainer {
+        width: 100%;
+        min-height: 300px;
+        background-color: transparent !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: start;
+
+        .imgContainer {
+            padding: 20px;
+            
+            .imageItem {
+                overflow: hidden;
+                max-width: 400px;
+                height: auto;
+                background-color: white;
+                border-radius: 1rem;
+                filter: grayscale(100%);
+                transition: filter 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    filter: grayscale(0%);
+
+                    .description {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .description {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.6); /* Màu đen trong suốt */
+                color: white;
+                font-style: italic;
+                text-align: center;
+                padding: 10px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+    }
+  }
 }
