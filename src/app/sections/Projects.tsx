@@ -1,43 +1,103 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import Card from '../components/Card'; // Adjust the path if necessary
 import styles from '../styles/Projects.module.scss';
 
-const projects = [
+export interface PetProject {
+    title: string,
+    description: string,
+    image: string,
+    link: string,
+    active: boolean,
+}
+
+const projects: PetProject[] = [
     {
-        title: 'Project 1',
-        description: 'A brief description of Project 1, its objectives, and outcomes.',
-        image: 'https://via.placeholder.com/300', // Replace with your image URL
-        link: 'https://example.com/project1',
+        title: 'Simon Game',
+        description: `
+            An engaging and interactive memory game developed 
+            using JavaScript and jQuery, designed to challenge 
+            players with progressively complex patterns. 
+            A perfect blend of fun and cognitive training!
+        `,
+        image: '/images/projects/simon-game/simon-game-1.png', // Replace with your image URL
+        link: 'https://lamnhuthoa.github.io/Simon-Game/',
+        active: true,
     },
     {
-        title: 'Project 2',
-        description: 'A brief description of Project 2, its objectives, and outcomes.',
-        image: 'https://via.placeholder.com/300', // Replace with your image URL
+        title: 'Collaborative Whiteboard 🎨📌',
+        description: `
+            The Collaborative Whiteboard App is a real-time, 
+            interactive digital whiteboard designed for seamless 
+            collaboration. Built with React, TypeScript, WebSockets, 
+            and Socket.IO, this app allows multiple users to draw, 
+            write, and brainstorm together on a shared canvas.
+        `,
+        image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
         link: 'https://example.com/project2',
+        active: false,
     },
-    {
-        title: 'Project 3',
-        description: 'A brief description of Project 3, its objectives, and outcomes.',
-        image: 'https://via.placeholder.com/300', // Replace with your image URL
-        link: 'https://example.com/project3',
-    },
+    // {
+    //     title: 'Project 3',
+    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
+    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
+    //     link: 'https://example.com/project3',
+    //     active: false,
+    // },
+    // {
+    //     title: 'Project 4',
+    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
+    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
+    //     link: 'https://example.com/project3',
+    //     active: false,
+    // },
+    // {
+    //     title: 'Project 5',
+    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
+    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
+    //     link: 'https://example.com/project3',
+    //     active: false,
+    // },
+    // {
+    //     title: 'Project 6',
+    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
+    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
+    //     link: 'https://example.com/project3',
+    //     active: false,
+    // },
 ];
 
 const Projects = () => {
+    const PROJECTS_PER_PAGE = 3;
+    const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
+
+    const handleShowMore = () => {
+        if (visibleCount >= projects.length) {
+            setVisibleCount(PROJECTS_PER_PAGE);
+        } else {
+            setVisibleCount((prev) => prev + PROJECTS_PER_PAGE);
+        }
+    };
+
     return (
         <section id="projects" className={`py-16 ${styles.container}`}>
             <h2 className={`text-3xl font-bold text-primary ${styles.title}`}>My Projects</h2>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project, index) => (
+            <div className={`mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${styles.innerContainer}`}>
+                {projects.slice(0, visibleCount).map((project, index) => (
                     <Card
                         key={index}
-                        image={project.image}
-                        title={project.title}
-                        description={project.description}
-                        link={project.link}
+                        project={project}
                     />
                 ))}
             </div>
+            {projects.length > PROJECTS_PER_PAGE && (
+                <div className={`${styles.showMoreBtnContainer}`}>
+                    <button className={`${styles.showMoreBtn}`} onClick={handleShowMore}>
+                        {visibleCount >= projects.length ? "Hide All" : "Show More Projects"}
+                    </button>
+                </div>
+            )}
         </section>
     );
 };
