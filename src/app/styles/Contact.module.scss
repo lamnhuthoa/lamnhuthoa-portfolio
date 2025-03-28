@@ -3,10 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url("/images/yard-yellow-tree.jpg");
+  background-image: url("/images/sad-leafs.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
+  gap: 20px;
 
   &::after {
     content: "";  // Pseudo-element to create overlay
@@ -50,4 +51,5 @@
     width: 33rem;
     padding: 20px;
     z-index: 99;
+    margin: 0px !important;
 }

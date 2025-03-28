@@ -9,6 +9,8 @@ const Footer = () => {
                 <div className={styles['social-links']}>
                     <a href="https://www.linkedin.com/in/lamnhuthoa" target="_blank" className={styles["social-link"]}>LinkedIn</a>
                     <a href="https://github.com/lamnhuthoa" target="_blank" className={styles["social-link"]}>GitHub</a>
+                    <a href="https://www.youtube.com/@lamnhuthoa" target="_blank" className={styles["social-link"]}>Youtube</a>
+                    <a href="https://soundcloud.com/hwa-lam" target="_blank" className={styles["social-link"]}>SoundCloud</a>
                     <a href="mailto:hoalamnhut@gmail.com" className={styles["social-link"]}>Email</a>
                 </div>
             </div>

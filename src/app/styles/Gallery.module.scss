@@ -3,20 +3,35 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-image: url("/images/xmas-tree-rain.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  gap: 20px;
+
+  &::after {
+    content: "";  // Pseudo-element to create overlay
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 54, 54, 0.5);
+    z-index: 1;
+  }
 
   .content-container {
     align-self: start;
   }
 
   .title {
+    z-index: 99;
     color: var(--highlight-color);
   }
 
   .galleryContainer {
-    margin: 1rem 20px 0 20px;
+    z-index: 99;
+    margin: 0px 20px;
     background-color: var(--primary-color);
     width: 1160px;
     // border: .5rem solid var(--highlight-color);

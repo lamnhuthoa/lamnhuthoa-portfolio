@@ -6,10 +6,12 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    gap: 20px;
 
     .innerContainer {
         width: 100%;
         min-height: 300px;
+        margin: 0 !important;
         background-color: transparent !important;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr)); // Ensure equal width for each column
