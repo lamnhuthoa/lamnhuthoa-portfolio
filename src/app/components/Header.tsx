@@ -20,13 +20,21 @@ const Header = () => {
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li>
-                            <a
+                            {/* <a
                                 data-tooltip-id="resume-tooltip"
                                 data-tooltip-content="Download Resume"
                                 className={styles['resume-button']}
                                 href="/files/CV_Hoa_Lam.pdf"
                                 download="CV_Hoa_Lam.pdf"
                                 rel="noopener noreferrer"
+                            > */}
+                            <a
+                                data-tooltip-id="resume-tooltip"
+                                data-tooltip-content="Download Resume"
+                                className={styles['resume-button']}
+                                href="https://drive.google.com/file/d/1rdp-O3M2EuKC86DA95KI1PSb0RKvcacJ/view?usp=sharing"
+                                rel="noopener noreferrer"
+                                target='_blank'
                             >
                                 Resume
                             </a>
