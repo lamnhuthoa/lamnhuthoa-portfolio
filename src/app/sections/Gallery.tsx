@@ -5,64 +5,52 @@ import Image from 'next/image'
 interface GalleryImage {
     src: string,
     desc: string,
-    vertical: boolean
 }
 
 const images: GalleryImage[] = [
     {
-        src: '/images/gallery/Mugs in an antique shop - Providence - Rhode Island.JPG',
-        desc: 'Mugs in an antique shop  • Providence, Rhode Island',
-        vertical: false,
+        src: '/images/gallery/bosch-run-2025.jpeg',
+        desc: 'BOSCH Run 2025 • Global City, Thu Duc, Ho Chi Minh',
     },
     {
-        src: '/images/gallery/Manhattan Bridge.JPG',
-        desc: 'Manhattan Bridge',
-        vertical: false,
+        src: '/images/gallery/metaverse-workshop-presenting-virtual-office-jan-2024.JPG',
+        desc: 'Metaverse Worksop (Jan 2024) - Me pitching the future like it’s Shark Tank: VR edition.',
     },
     {
-        src: '/images/gallery/Back Bay Houses.JPG',
-        desc: 'Back Bay Houses',
-        vertical: true,
+        src: '/images/gallery/work-etown-building-dawn-2022.JPG',
+        desc: 'Etown at Dusk (2022) • When deadlines fade into city lights.',
     },
     {
-        src: '/images/gallery/Vessel - Hudson Yard, Manhattan.JPG',
-        desc: 'Hudson Yard',
-        vertical: true,
+        src: '/images/gallery/hobby-piano-playing-caligraphy-event.JPG',
+        desc: 'Playing piano at a Vietnamese Calligraphy Event',
     },
     {
-        src: '/images/gallery/Blanket of snow covering Boylston St..JPG',
-        desc: 'Snow covering Boylston St.',
-        vertical: true,
+        src: '/images/gallery/metaverse-workshop-brainstorming-next-apps.jpg',
+        desc: 'Brainstorming Metaverse apps • AKA arguing over whose app looks cooler.',
     },
     {
-        src: '/images/gallery/Statue of Liberty.JPG',
-        desc: 'Statue of Liberty • New York',
-        vertical: true,
+        src: '/images/gallery/life-cafe-la-viet-film.JPG',
+        desc: 'Coffee Break at Là Việt • Brew-tiful moment of peace & beans.',
     },
     {
-        src: '/images/gallery/Boylston Street.JPG',
-        desc: 'An intersection on Boylston St.',
-        vertical: true,
+        src: '/images/gallery/metaverse-demo-day-apr-2024.jpeg',
+        desc: 'Demo Day (Apr 2024) • Metaverse Virtual Office live!',
     },
     {
-        src: '/images/gallery/Paramount Theatre - Boston - MA.JPG',
-        desc: 'Paramount Theatre • Boston, Massachusetts',
-        vertical: true,
+        src: '/images/gallery/tc-event-christmas-2024.JPG',
+        desc: 'Bosch Christmas 2024 • Recording songs, spreading cheer, trying not to go off-key.',
     },
     {
-        src: '/images/gallery/Fenway Park - Boston - MA.JPG',
-        desc: 'Fenway Park',
-        vertical: true,
+        src: '/images/gallery/travel-dalat-tuyen-lam-lake-jul-2024.JPG',
+        desc: 'Tuyền Lâm Lake, Dalat • Escaping code, embracing clouds.',
     },
     {
-        src: '/images/gallery/Northeastern University.JPG',
-        desc: 'Northeastern University',
-        vertical: true,
+        src: '/images/gallery/metaverse-virtual-office-config-animation-full-body-character.jpeg',
+        desc: 'Character rigging in the Metaverse • when animation makes you feel alive (literally).',
     },
     {
-        src: '/images/gallery/New York Times Building.JPG',
-        desc: 'New York Times Building',
-        vertical: true,
+        src: '/images/gallery/work-etown-2-building.JPG',
+        desc: 'Break time • Etown 2 Building, Ho Chi Minh City',
     },
 ]
 
@@ -74,7 +62,7 @@ const Gallery = () => {
                 <div className={`${styles.wrapper}`}>
                     {images.map((img) => {
                         return (
-                            <figure key={img.src} className={`${styles.imgContainer} ${img.vertical ? styles.vertical : styles.horizontal}`}>
+                            <figure key={img.src} className={`${styles.imgContainer}`}>
                                 <Image src={img.src} alt={img.desc} width={400} height={300} layout="intrinsic" />
                                 <div className={`${styles.description}`}>
                                     {img.desc}

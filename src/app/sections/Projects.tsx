@@ -25,33 +25,50 @@ const projects: PetProject[] = [
         link: 'https://lamnhuthoa.github.io/Simon-Game/',
         active: true,
     },
+    // {
+    //     title: 'Collaborative Whiteboard 🎨📌',
+    //     description: `
+    //         The Collaborative Whiteboard App is a real-time, 
+    //         interactive digital whiteboard designed for seamless 
+    //         collaboration. Built with React, TypeScript, WebSockets, 
+    //         and Socket.IO, this app allows multiple users to draw, 
+    //         write, and brainstorm together on a shared canvas.
+    //     `,
+    //     image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
+    //     link: 'https://example.com/project2',
+    //     active: false,
+    // },
     {
-        title: 'Collaborative Whiteboard 🎨📌',
+        title: 'Youtube Video Summary Chatbot',
         description: `
-            The Collaborative Whiteboard App is a real-time, 
-            interactive digital whiteboard designed for seamless 
-            collaboration. Built with React, TypeScript, WebSockets, 
-            and Socket.IO, this app allows multiple users to draw, 
-            write, and brainstorm together on a shared canvas.
+            <p>A hackathon project my colleague and I built to apply what we learned in Bosch’s AI training course.</p>
+            <ul>
+                <li style="margin-left: 1rem">• React-based UI and Flask backend</li>
+                <li style="margin-left: 1rem">• LangChain with Retrieval-Augmented Generation (RAG)</li>
+                <li style="margin-left: 1rem">• Conversation history stored in PostgreSQL</li>
+                <li style="margin-left: 1rem">• Text-to-Speech functionality</li>
+            </ul>
         `,
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
-        link: 'https://example.com/project2',
+        link: 'https://example.com/project3',
         active: false,
     },
-    // {
-    //     title: 'Project 3',
-    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
-    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
-    //     link: 'https://example.com/project3',
-    //     active: false,
-    // },
-    // {
-    //     title: 'Project 4',
-    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
-    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
-    //     link: 'https://example.com/project3',
-    //     active: false,
-    // },
+    {
+        title: 'Virtual Office',
+        description: `
+            A collection of VR applications, including:
+            <ul>
+                <li style="margin-left: 1rem">• Virtual Exhibition – 3D showcase of Bosch products </li>
+                <li style="margin-left: 1rem">• Virtual Job Fair – Interactive recruitment experience</li>
+                <li style="margin-left: 1rem">• Virtual Assistant – LLM-powered assistant in VR</li>
+            </ul>
+            Built as PoC projects during my Unity Learn training at Bosch, this app features inverse kinematics, fluid shaders, and AI integration.  
+            It's my first VR/MR project—stay tuned for more immersive experiences!
+        `,
+        image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
+        link: 'https://example.com/project3',
+        active: false,
+    },
     // {
     //     title: 'Project 5',
     //     description: 'A brief description of Project 3, its objectives, and outcomes.',

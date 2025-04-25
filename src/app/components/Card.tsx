@@ -26,7 +26,7 @@ const Card = (props: CardProps) => {
                     </a>
                 )}
 
-                <p>{description}</p>
+                <div dangerouslySetInnerHTML={{ __html: description }} />
                 {/* <button>View Project</button> */}
             </div>
         </div>
