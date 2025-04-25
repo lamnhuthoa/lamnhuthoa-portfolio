@@ -62,8 +62,9 @@ const projects: PetProject[] = [
                 <li style="margin-left: 1rem">• Virtual Job Fair – Interactive recruitment experience</li>
                 <li style="margin-left: 1rem">• Virtual Assistant – LLM-powered assistant in VR</li>
             </ul>
-            Built as PoC projects during my Unity Learn training at Bosch, this app features inverse kinematics, fluid shaders, and AI integration.  
-            It's my first VR/MR project—stay tuned for more immersive experiences!
+            My first VR/MR project since June 2023, built through self-learning on Unity Learn. 
+            Featuring inverse kinematics, fluid shaders, and AI integration, the app was later presented to the board of management, where it received encouraging feedback as a potential direction for future solutions.
+            More immersive ideas are on the way!
         `,
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
         link: 'https://example.com/project3',
