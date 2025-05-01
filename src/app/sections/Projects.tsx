@@ -45,7 +45,7 @@ const projects: PetProject[] = [
     {
         title: 'Youtube Video Summary Chatbot',
         description: `
-            <p>A hackathon project my colleague and I built to apply what we learned in Bosch’s AI training course.</p>
+            A hackathon project my colleague and I built to apply what we learned in Bosch’s AI training course.
             <ul>
                 <li style="margin-left: 1rem">• React-based UI and Flask backend</li>
                 <li style="margin-left: 1rem">• LangChain with Retrieval-Augmented Generation (RAG)</li>
