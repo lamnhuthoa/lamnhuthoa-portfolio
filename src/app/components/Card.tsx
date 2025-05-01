@@ -9,7 +9,7 @@ interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-    const { image, title, description, link, active } = props.project;
+    const { image, title, description, link, active, sourceCodeLink } = props.project;
 
     return (
         <div className={styles.card}>
@@ -23,12 +23,12 @@ const Card = (props: CardProps) => {
                         <a
                             data-tooltip-id="source-code-link-tooltip"
                             data-tooltip-content="Repository"
-                            href={link}
+                            href={sourceCodeLink}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={!active ? `project-repo ${styles.projectNotActive}` : `project-repo`}
                         >
-                            <Image className={styles['icon']} src='/github-mark.svg' alt="repository-icon" />
+                            <Image width={30} height={30} className={styles['icon']} src='/github-mark.svg' alt="repository-icon" />
                         </a>
                         <a
                             data-tooltip-id="source-code-link-tooltip"
@@ -38,7 +38,7 @@ const Card = (props: CardProps) => {
                             rel="noopener noreferrer"
                             className={!active ? `project-repo ${styles.projectNotActive}` : `project-repo`}
                         >
-                            <Image className={styles['icon']} src='/link-external.svg' alt="website-icon" />
+                            <Image width={30} height={30} className={styles['icon']} src='/link-external.svg' alt="website-icon" />
                         </a>
                     </div>
                 )}
