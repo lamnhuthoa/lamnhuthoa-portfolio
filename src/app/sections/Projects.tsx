@@ -10,6 +10,8 @@ export interface PetProject {
     image: string,
     link: string,
     active: boolean,
+    hasSourceCode: boolean,
+    sourceCodeLink?: string
 }
 
 const projects: PetProject[] = [
@@ -24,6 +26,8 @@ const projects: PetProject[] = [
         image: '/images/projects/simon-game/simon-game-1.png', // Replace with your image URL
         link: 'https://lamnhuthoa.github.io/Simon-Game/',
         active: true,
+        hasSourceCode: true,
+        sourceCodeLink: 'https://github.com/lamnhuthoa/Simon-Game'
     },
     // {
     //     title: 'Collaborative Whiteboard 🎨📌',
@@ -52,6 +56,8 @@ const projects: PetProject[] = [
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
         link: 'https://example.com/project3',
         active: false,
+        hasSourceCode: false,
+        sourceCodeLink: ''
     },
     {
         title: 'Virtual Office',
@@ -69,6 +75,8 @@ const projects: PetProject[] = [
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
         link: 'https://example.com/project3',
         active: false,
+        hasSourceCode: false,
+        sourceCodeLink: ''
     },
     // {
     //     title: 'Project 5',

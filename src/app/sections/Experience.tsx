@@ -55,7 +55,6 @@ const Experience = () => {
         <section id="experience" className={`py-16 ${styles.container}`}>
             <h2 className={`text-3xl font-bold text-primary ${styles.title}`}>Professional Experience</h2>
             <div className={`${styles['content-container']}`}>
-                {/* <p className={`${styles.text} mt-4`}>I have worked with various companies...</p> */}
                 <Timeline experiences={experiences} />
             </div>
         </section>

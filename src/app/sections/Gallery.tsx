@@ -51,7 +51,7 @@ const images: GalleryImage[] = [
     {
         src: '/images/gallery/work-etown-2-building.JPG',
         desc: 'Break time • Etown 2 Building, Ho Chi Minh City',
-    },
+    }
 ]
 
 const Gallery = () => {

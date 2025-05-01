@@ -17,6 +17,7 @@
   --border-radius-medium: 8px;
   --border-radius-large: 12px; /* For cards, modals */
   --border-radius-rounded: 50%; /* Fully rounded */
+  --container-width: 85rem;
 }
 
 * {
@@ -29,7 +30,7 @@ container {
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: var(--primary-color);
 }
 
@@ -43,8 +44,20 @@ header {
 section {
   padding: 40px 0;
 
+  &.intro {
+    padding: 0;
+  }
+
+  &.experience {
+    padding-top: 0;
+  }
+
+  &.gallery {
+    padding-bottom: 0;
+  }
+
   &.contact {
-    padding-bottom: 0px !important;
+    padding: 0px !important;
   }
 }
 

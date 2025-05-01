@@ -29,14 +29,14 @@ const Header = () => {
                                 rel="noopener noreferrer"
                             > */}
                             <a
-                                data-tooltip-id="resume-tooltip"
-                                data-tooltip-content="Download Resume"
+                                // data-tooltip-id="resume-tooltip"
+                                // data-tooltip-content="Download CV"
                                 className={styles['resume-button']}
                                 href="https://drive.google.com/file/d/1rdp-O3M2EuKC86DA95KI1PSb0RKvcacJ/view?usp=sharing"
                                 rel="noopener noreferrer"
                                 target='_blank'
                             >
-                                Resume
+                                Download CV
                             </a>
                         </li>
                     </ul>

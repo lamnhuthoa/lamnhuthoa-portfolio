@@ -1,22 +1,24 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-image: url("/images/sad-leafs.jpg");
+  background-image: url("/images/boston-green.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   gap: 20px;
+  height: 35vh;
 
   &::after {
-    content: "";  // Pseudo-element to create overlay
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(26, 54, 54, 0.5);
+    backdrop-filter: blur(2px);
     z-index: 1;
   }
 
@@ -35,6 +37,7 @@
   }
 
   .email-me-button {
+    background-color: var(--primary-color);
     border-radius: var(--border-radius-small);
     z-index: 99;
 
