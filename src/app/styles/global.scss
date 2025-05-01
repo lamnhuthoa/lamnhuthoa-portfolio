@@ -4,7 +4,8 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1a3636;  /* Deep Teal */
+//   --primary-color: #1a3636;  /* Deep Teal */
+  --primary-color: rgb(26, 54, 54);  /* Deep Teal */
   --accent-color: #40534C;   /* Charcoal Green */
   --secondary-color: #677D6A; /* Sage Green */
   --highlight-color: #D6BD98; /* Sand Beige */
