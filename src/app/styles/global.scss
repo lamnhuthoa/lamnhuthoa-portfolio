@@ -47,20 +47,8 @@ header {
 section {
   padding: 40px 0;
 
-  &.intro {
+  &.intro, &.experience, &.projects, &.gallery, &.contact {
     padding: 0;
-  }
-
-  &.experience {
-    padding-top: 0;
-  }
-
-  &.gallery {
-    padding-bottom: 0;
-  }
-
-  &.contact {
-    padding: 0px !important;
   }
 }
 

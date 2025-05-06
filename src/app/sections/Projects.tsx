@@ -10,8 +10,10 @@ export interface PetProject {
     image: string,
     link: string,
     active: boolean,
+    hasDemoWebsite: boolean,
     hasSourceCode: boolean,
-    sourceCodeLink?: string
+    sourceCodeLink?: string,
+    extendedContent?: string,
 }
 
 const projects: PetProject[] = [
@@ -26,57 +28,46 @@ const projects: PetProject[] = [
         image: '/images/projects/simon-game/simon-game-1.png', // Replace with your image URL
         link: 'https://lamnhuthoa.github.io/Simon-Game/',
         active: true,
+        hasDemoWebsite: true,
         hasSourceCode: true,
         sourceCodeLink: 'https://github.com/lamnhuthoa/Simon-Game'
     },
-    // {
-    //     title: 'Collaborative Whiteboard 🎨📌',
-    //     description: `
-    //         The Collaborative Whiteboard App is a real-time, 
-    //         interactive digital whiteboard designed for seamless 
-    //         collaboration. Built with React, TypeScript, WebSockets, 
-    //         and Socket.IO, this app allows multiple users to draw, 
-    //         write, and brainstorm together on a shared canvas.
-    //     `,
-    //     image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
-    //     link: 'https://example.com/project2',
-    //     active: false,
-    // },
     {
-        title: 'Youtube Video Summary Chatbot',
+        title: 'Video Summary Chatbot',
         description: `
-            A hackathon project my colleague and I built to apply what we learned in Bosch’s AI training course.
-            <ul>
-                <li style="margin-left: 1rem">• React-based UI and Flask backend</li>
-                <li style="margin-left: 1rem">• LangChain with Retrieval-Augmented Generation (RAG)</li>
-                <li style="margin-left: 1rem">• Conversation history stored in PostgreSQL</li>
-                <li style="margin-left: 1rem">• Text-to-Speech functionality</li>
-            </ul>
+            A two-week hackathon project my colleague and I developed to apply the skills we gained during an AI training course. 
+            The application features a React-based user interface and a Flask backend. 
+            It leverages LangChain's YouTube Loader, Retrieval-Augmented Generation (RAG), and a vector database for efficient semantic search and dynamic query handling.
         `,
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
-        link: 'https://example.com/project3',
-        active: false,
-        hasSourceCode: false,
-        sourceCodeLink: ''
+        link: '',
+        active: true,
+        hasDemoWebsite: false,
+        hasSourceCode: true,
+        sourceCodeLink: 'https://github.com/lamnhuthoa/video-summary-chatbot',
+        extendedContent: `
+            We integrated advanced LLM technologies using Llama3 and the Ollama embedding model to provide accurate, context-aware responses. 
+            The chatbot also saves and retrieves past conversation history for contextual continuity and includes text-to-speech functionality to enhance accessibility and interactivity.
+        `
     },
     {
         title: 'Virtual Office',
         description: `
-            A collection of VR applications, including:
-            <ul>
-                <li style="margin-left: 1rem">• Virtual Exhibition – 3D showcase of Bosch products </li>
-                <li style="margin-left: 1rem">• Virtual Job Fair – Interactive recruitment experience</li>
-                <li style="margin-left: 1rem">• Virtual Assistant – LLM-powered assistant in VR</li>
-            </ul>
-            My first VR/MR project since June 2023, built through self-learning on Unity Learn. 
-            Featuring inverse kinematics, fluid shaders, and AI integration, the app was later presented to the board of management, where it received encouraging feedback as a potential direction for future solutions.
-            More immersive ideas are on the way!
+            A collection of VR applications developed using Unity and Blender, featuring Final IK for realistic inverse kinematics. 
+            The project includes a Virtual Exhibition showcasing Bosch products in 3D, a Virtual Job Fair offering an interactive recruitment experience, and a Virtual Assistant powered by LLMs for in-VR support. 
+            These applications were designed to explore immersive solutions within corporate environments and push the boundaries of interactive user experiences.
         `,
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
         link: 'https://example.com/project3',
         active: false,
+        hasDemoWebsite: false,
         hasSourceCode: false,
-        sourceCodeLink: ''
+        sourceCodeLink: '',
+        extendedContent: `
+            This is my first VR/MR project since June 2023, built through self-learning on Unity Learn. 
+            Featuring inverse kinematics, fluid shaders, and AI integration, the app was later presented to the board of management, where it received encouraging feedback as a potential direction for future solutions.
+            More immersive ideas are on the way!
+        `
     },
     // {
     //     title: 'Project 5',

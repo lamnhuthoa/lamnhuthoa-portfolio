@@ -7,7 +7,7 @@ interface TimelineItemProps extends Experience {
 }
 
 const TimelineItem = (props: TimelineItemProps) => {
-    const MAXIMUM_DESCRIPTIONS_SHOW = 4;
+    const MAXIMUM_DESCRIPTIONS_SHOW = 3;
     const { year, role, company, description, showAll, setShowAll } = props;
     const visibleDescriptions = showAll ? description : description.slice(0, MAXIMUM_DESCRIPTIONS_SHOW);
 
@@ -26,14 +26,12 @@ const TimelineItem = (props: TimelineItemProps) => {
                     ))}
                 </ul>
                 {description.length > MAXIMUM_DESCRIPTIONS_SHOW && (
-                    <div className={`${styles.showMoreBtnContainer}`}>
-                        <button
-                            className={`${styles.showMoreBtn}`}
-                            onClick={() => setShowAll(!showAll)}
-                        >
-                            {showAll ? "Show Less" : "Show More"}
-                        </button>
-                    </div>
+                    <span
+                        className="text-blue-500 cursor-pointer"
+                        onClick={() => setShowAll(!showAll)}
+                    >
+                        {showAll ? "See less" : "See more"}
+                    </span>
                 )}
             </div>
         </div>

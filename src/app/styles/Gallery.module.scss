@@ -8,6 +8,7 @@
   background-position: center;
   position: relative;
   gap: 20px;
+  padding-top: 40px;
 
   &::after {
     content: "";
@@ -76,21 +77,20 @@
                     opacity: 1;
                 }
 
-                img {
-                    scale: 1.125;
-                }
+                // img {
+                //     scale: 1.125;
+                // }
             }
 
             .description {
                 grid-area: 1 / 1 / -1 / -1;
                 z-index: 99;
                 align-self: end;
-                // background: rgba(0, 0, 0, 0.6);
-                // background: linear-gradient(transparent 15%, rgb(0 0 0 / 1));
-                background-color: rgba(0,0,0,.5);
+                background-color: rgba(0,0,0,.8);
                 color: white;
                 font-style: italic;
                 text-align: center;
+                font-size:.875rem;
                 padding: 10px;
                 opacity: 0;
                 transition: opacity 0.3s ease-in-out;

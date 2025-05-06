@@ -3,7 +3,7 @@ import styles from '../styles/Contact.module.scss'
 
 export const Contact = () => {
     return (
-        <section className={`py-16 text-center ${styles.container}`}>
+        <section id="contact" className={`py-16 text-center ${styles.container}`}>
             <h2 className={`text-3xl font-bold text-primary ${styles.title}`}>Get In Touch</h2>
             <div className={`flex flex-col mt-4 ${styles.contactMeContainer}`}>
                 <p>{"I'm passionate about turning ideas into reality. Let's connect!"}</p>
