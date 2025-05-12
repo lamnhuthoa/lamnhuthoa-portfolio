@@ -76,7 +76,7 @@ const Header = (props: HeaderProps) => {
                     </Fragment>
                 )}
             </div>
-            <Tooltip id="resume-tooltip" place="bottom" className={`${styles.tooltip}`} />
+            <Tooltip id="resume-tooltip" place="bottom" className='tooltip' />
         </header>
     );
 };
