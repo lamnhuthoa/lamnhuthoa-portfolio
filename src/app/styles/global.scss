@@ -4,16 +4,16 @@
 @tailwind utilities;
 
 :root {
-//   --primary-color: #1a3636;  /* Deep Teal */
-  --primary-color: rgb(26, 54, 54);  /* Deep Teal */
-  --accent-color: #40534C;   /* Charcoal Green */
-  --secondary-color: #677D6A; /* Sage Green */
-  --highlight-color: #D6BD98; /* Sand Beige */
-  --text-color: #FFFFFF;     /* White */
-  --link-color-soft: #3A6073;
-  --link-color-stress: #2B4D66;
-  --link-color-teal: #2C5F63;
-  --link-color-stone: #4A6484;
+  //   --primary-color: #1a3636;  /* Deep Teal */
+  --primary-color: rgb(26, 54, 54); /* Deep Teal */
+  --accent-color: #40534c; /* Charcoal Green */
+  --secondary-color: #677d6a; /* Sage Green */
+  --highlight-color: #d6bd98; /* Sand Beige */
+  --text-color: #ffffff; /* White */
+  --link-color-soft: #3a6073;
+  --link-color-stress: #2b4d66;
+  --link-color-teal: #2c5f63;
+  --link-color-stone: #4a6484;
   --border-radius-small: 5px;
   --border-radius-medium: 8px;
   --border-radius-large: 12px; /* For cards, modals */
@@ -23,7 +23,7 @@
 
 * {
   scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 450;
 }
 
@@ -32,7 +32,7 @@ container {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: var(--accent-color);
   color: var(--primary-color);
 }
@@ -47,12 +47,19 @@ header {
 section {
   padding: 40px 0;
 
-  &.intro, &.experience, &.projects, &.gallery, &.contact {
+  &.intro,
+  &.experience,
+  &.projects,
+  &.gallery,
+  &.honors,
+  &.contact {
     padding: 0;
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--primary-color);
 }
 
@@ -78,4 +85,12 @@ footer {
   color: var(--text-color);
   padding: 20px;
   text-align: center;
+}
+
+.tooltip {
+  background-color: var(--highlight-color) !important;
+  color: var(--primary-color) !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
 }

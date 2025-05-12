@@ -27,7 +27,7 @@ const TimelineItem = (props: TimelineItemProps) => {
                 </ul>
                 {description.length > MAXIMUM_DESCRIPTIONS_SHOW && (
                     <span
-                        className="text-blue-500 cursor-pointer"
+                        className="text-teal-900 cursor-pointer hover:underline transition-colors"
                         onClick={() => setShowAll(!showAll)}
                     >
                         {showAll ? "See less" : "See more"}

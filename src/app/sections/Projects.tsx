@@ -4,21 +4,29 @@ import React, { useState } from 'react';
 import Card from '../components/Card'; // Adjust the path if necessary
 import styles from '../styles/Projects.module.scss';
 
-export interface PetProject {
+type ProjectCategory = 'GAME' | 'AI' | 'XR';
+
+export interface IProject {
     title: string,
+    label: string,
     description: string,
     image: string,
     link: string,
     active: boolean,
     hasDemoWebsite: boolean,
     hasSourceCode: boolean,
+    images: string[],
+    technologies: string[],
+    features: string[],
+    category: ProjectCategory,
     sourceCodeLink?: string,
     extendedContent?: string,
 }
 
-const projects: PetProject[] = [
+export const projects: IProject[] = [
     {
         title: 'Simon Game',
+        label: 'simon-game',
         description: `
             An engaging and interactive memory game developed 
             using JavaScript and jQuery, designed to challenge 
@@ -30,10 +38,29 @@ const projects: PetProject[] = [
         active: true,
         hasDemoWebsite: true,
         hasSourceCode: true,
-        sourceCodeLink: 'https://github.com/lamnhuthoa/Simon-Game'
+        sourceCodeLink: 'https://github.com/lamnhuthoa/Simon-Game',
+        technologies: [
+            'JavaScript',
+            'jQuery',
+            'HTML',
+            'CSS',
+        ],
+        features: [
+            'Interactive Game',
+            'Progressive Difficulty',
+            'Memory Challenge',
+            'Sound Effects'
+        ],
+        images: [
+            'simon-game-1.png',
+            'simon-game-2.png',
+            'simon-game-3.png',
+        ],
+        category: 'GAME',
     },
     {
         title: 'Video Summary Chatbot',
+        label: 'video-summary-chatbot',
         description: `
             A two-week hackathon project my colleague and I developed to apply the skills we gained during an AI training course. 
             The application features a React-based user interface and a Flask backend. 
@@ -48,14 +75,41 @@ const projects: PetProject[] = [
         extendedContent: `
             We integrated advanced LLM technologies using Llama3 and the Ollama embedding model to provide accurate, context-aware responses. 
             The chatbot also saves and retrieves past conversation history for contextual continuity and includes text-to-speech functionality to enhance accessibility and interactivity.
-        `
+        `,
+        technologies: [
+            'React',
+            'Python',
+            'Flask',
+            'LangChain',
+            'YouTube Loader',
+            'Retrieval-Augmented Generation (RAG)',
+            'Vector Database',
+            'Llama3',
+            'Ollama Embedding Model',
+            'PostgreSQL',
+        ],
+        features: [
+            'Video Summary',
+            'Chatbot',
+            'Text-to-Speech',
+            'Conversation History',
+            'Delete conversation',
+            'Context-Aware Responses'
+        ],
+        images: [],
+        category: 'AI',
     },
     {
         title: 'Virtual Office',
+        label: 'virtual-office',
         description: `
-            A collection of VR applications developed using Unity and Blender, featuring Final IK for realistic inverse kinematics. 
-            The project includes a Virtual Exhibition showcasing Bosch products in 3D, a Virtual Job Fair offering an interactive recruitment experience, and a Virtual Assistant powered by LLMs for in-VR support. 
-            These applications were designed to explore immersive solutions within corporate environments and push the boundaries of interactive user experiences.
+            A collection of VR applications developed using Unity and Blender, 
+            featuring Final IK for realistic inverse kinematics. 
+            The project includes a Virtual Exhibition showcasing Bosch products in 3D, 
+            a Virtual Job Fair offering an interactive recruitment experience, 
+            and a Virtual Assistant powered by LLMs for in-VR support. 
+            These applications were designed to explore immersive solutions 
+            within corporate environments and push the boundaries of interactive user experiences.
         `,
         image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
         link: 'https://example.com/project3',
@@ -64,25 +118,32 @@ const projects: PetProject[] = [
         hasSourceCode: false,
         sourceCodeLink: '',
         extendedContent: `
-            This is my first VR/MR project since June 2023, built through self-learning on Unity Learn. 
-            Featuring inverse kinematics, fluid shaders, and AI integration, the app was later presented to the board of management, where it received encouraging feedback as a potential direction for future solutions.
+            This is my first VR project since June 2023, built through self-learning on Unity Learn. 
+            Featuring inverse kinematics, fluid shaders, and AI integration, 
+            the app was later presented to the board of management, 
+            where it received encouraging feedback as a potential direction for future solutions.
             More immersive ideas are on the way!
-        `
+        `,
+        technologies: [
+            'Unity',
+            'Blender',
+            'Final IK',
+            'C#',
+            'Photon',
+            'Oculus SDK',
+            'Photon Voice',
+            'Photon Pun 2',
+        ],
+        features: [
+            'Virtual Exhibition',
+            'Virtual Job Fair',
+            'Inverse Kinematics',
+            '3D Modeling',
+            'Interactive Recruitment Experience',
+        ],
+        images: [],
+        category: 'XR',
     },
-    // {
-    //     title: 'Project 5',
-    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
-    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
-    //     link: 'https://example.com/project3',
-    //     active: false,
-    // },
-    // {
-    //     title: 'Project 6',
-    //     description: 'A brief description of Project 3, its objectives, and outcomes.',
-    //     image: 'https://via.placeholder.com/300', // Replace with your image URL
-    //     link: 'https://example.com/project3',
-    //     active: false,
-    // },
 ];
 
 const Projects = () => {

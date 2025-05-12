@@ -1,0 +1,200 @@
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/square_leaf_pattern.jpg");
+  background-size: contain;
+  background-position: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 54, 54, 0.95);
+    z-index: 1;
+  }
+
+  .headerContainer {
+    z-index: 99;
+  }
+
+  .projectContentContainer {
+    max-width: calc(var(--container-width) - 20rem);
+    background-color: rgb(255, 255, 255); // disable later;
+    // height: 100vh;
+    width: 100%;
+    margin: 40px auto;
+    border-radius: 20px !important;
+    padding: 20px 30px;
+    z-index: 99;
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      &:first-child {
+        .sectionTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        align-items: end;
+      }
+
+      .sectionTitle {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      .projectDescription {
+        color: var(--accent-color);
+      }
+
+      .technologiesList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .technologyItem {
+          background-color: var(--accent-color);
+          color: var(--text-color);
+          padding: 5px 10px;
+          border-radius: var(--border-radius-small);
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      .featuresList {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .featureItem {
+          background-color: var(--highlight-color);
+          color: var(--primary-color);
+          padding: 5px 10px;
+          border-radius: var(--border-radius-small);
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      .projectGallery {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .galleryItem {
+          background-color: var(--highlight-color);
+          color: var(--primary-color);
+          padding: 5px 10px;
+          border-radius: var(--border-radius-small);
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      .project-links-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 15px;
+        justify-content: flex-end;
+
+        a.link {
+          width: max-content;
+          text-decoration: none;
+          background-color: var(--primary-color);
+          padding: 10px 20px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          .icon {
+            width: 25px;
+            height: 25px;
+            display: block;
+          }
+
+          p {
+            font-size: 1rem;
+            color: var(--text-color);
+          }
+
+          &:hover {
+            background-color: var(--highlight-color);
+
+            p {
+              color: var(--primary-color);
+            }
+          }
+        }
+
+        .projectNotActive {
+          pointer-events: none !important;
+          text-decoration: none !important;
+
+          display: none;
+        }
+      }
+    }
+  }
+
+  .footerContainer {
+    justify-self: flex-end !important;
+    z-index: 99;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectContentContainer {
+    .projectContentContainer {
+      .section {
+        margin-bottom: 10px;
+      }
+      .sectionTitle {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .headerContainer {
+    margin: 0 auto;
+  }
+  .footerContainer {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectContentContainer {
+    .projectContentContainer {
+      .section {
+        margin-bottom: 5px;
+      }
+      .sectionTitle {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .headerContainer {
+    margin: 0 auto;
+  }
+  .footerContainer {
+    margin: 0 auto;
+  }
+}
