@@ -5,7 +5,7 @@ import { Contact } from "./sections/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./sections/Gallery";
-import HonorsAwards from "./sections/HonorsAwards";
+// import HonorsAwards from "./sections/HonorsAwards";
 
 export default function Home() {
     return (
