@@ -92,7 +92,7 @@ const Project = (props: ProjectProps) => {
                         </div>
                         {technologies.length > 0 && (
                             <div className={`${styles.section}`}>
-                                <h1 className={`${styles.sectionTitle}`}>Technologies</h1>
+                                <h1 className={`${styles.sectionTitle}`}><span>Technologies</span></h1>
                                 <div className={`${styles.technologiesList}`}>
                                     {technologies?.map((technology, index) => (
                                         <p key={index} className={`${styles.technologyItem}`}>
@@ -104,7 +104,7 @@ const Project = (props: ProjectProps) => {
                         )}
                         {features.length > 0 && (
                             <div className={`${styles.section}`}>
-                                <h1 className={`${styles.sectionTitle}`}>Features</h1>
+                                <h1 className={`${styles.sectionTitle}`}><span>Features</span></h1>
                                 <div className={`${styles.featuresList}`}>
                                     {features?.map((feature, index) => (
                                         <p key={index} className={`${styles.featureItem}`}>
@@ -116,13 +116,13 @@ const Project = (props: ProjectProps) => {
                         )}
                         {images.length > 0 && (
                             <div className={`${styles.section}`}>
-                                <h1 className={`${styles.sectionTitle}`}>Project Gallery</h1>
+                                <h1 className={`${styles.sectionTitle}`}><span>Project Gallery</span></h1>
                                 <div className={`${styles.projectGallery}`}>
                                     <PhotoGallery photos={images.map(image => {
                                         return {
                                             src: `${imgDir}${image}`,
-                                            width: 600,
-                                            height: 300,
+                                            width: 1200,
+                                            height: 900,
                                             alt: image,
                                         }
                                     })} />

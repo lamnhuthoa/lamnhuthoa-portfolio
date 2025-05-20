@@ -66,7 +66,7 @@ export const projects: IProject[] = [
             The application features a React-based user interface and a Flask backend. 
             It leverages LangChain's YouTube Loader, Retrieval-Augmented Generation (RAG), and a vector database for efficient semantic search and dynamic query handling.
         `,
-        image: '/images/projects/collaborative-whiteboard/collaborative-whiteboard-1.png', // Replace with your image URL
+        image: '/images/projects/video-summary-chatbot/video-summary-chatbot-1.png', // Replace with your image URL
         link: '',
         active: true,
         hasDemoWebsite: false,
@@ -96,7 +96,14 @@ export const projects: IProject[] = [
             'Delete conversation',
             'Context-Aware Responses'
         ],
-        images: [],
+        images: [
+            'video-summary-chatbot-1.png',
+            'video-summary-chatbot-2.png',
+            'video-summary-chatbot-4.png',
+            'video-summary-chatbot-5.png',
+            'video-summary-chatbot-6.png',
+            'video-summary-chatbot-7.png',
+        ],
         category: 'AI',
     },
     {

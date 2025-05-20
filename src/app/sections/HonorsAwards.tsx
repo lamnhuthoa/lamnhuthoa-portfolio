@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/HonorsAwards.module.scss'
+import Image from 'next/image'
 
 const HonorsAwards = () => {
     return (
@@ -25,10 +26,12 @@ const HonorsAwards = () => {
                 </div>
 
                 <div className="flex justify-center md:justify-end">
-                    <img
+                    <Image
                         src="/images/boston-green.jpg" // replace with your actual image path
                         alt="Award Certificates"
                         className="rounded-xl shadow-lg max-w-xs w-full object-cover"
+                        width={600}
+                        height={300}
                     />
                 </div>
             </div>
